@@ -1,0 +1,218 @@
+<!DOCTYPE html> <!--Declares document type-->
+
+<html> <!--Contains all HTML-->
+    <head><!--backend-->
+        <title>Contact</title> <!--Page title-->
+
+        <!--External links-->
+        <link rel="stylesheet" href="CSS/MainStyling.css" type="text/css"> <!--CSS-->
+
+        <!-- Boostrap 4 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <!-- Boostrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <!--Meta data-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Your Name">
+        <meta name="description" content="Portfolio site for a freelance artist">
+        <meta name="keywords" content="art, artist, painting, commissions, portfolio, influencer, social media, Reikert Wessels, rw_art">
+
+        <script>
+            function submitForm() {
+                // Perform form validation
+                var name = document.getElementById('name-input').value;
+                var name = document.getElementById('surname-input').value;
+                var phone = document.getElementById('phone-input').value;
+                var email = document.getElementById('email-input').value;
+                var message = document.getElementById('message-input').value;
+                
+                if (name === '' || phone === '' || email === '' || message === '') {
+                    alert('Please fill in all the required fields.');
+                    return;
+                }
+
+                
+                // Clear form fields after submission
+                document.getElementById('name-input').value = '';
+                document.getElementById('phone-input').value = '';
+                document.getElementById('email-input').value = '';
+                document.getElementById('message-input').value = '';
+            }
+
+            function requestCallback() {
+                // Perform callback request functionality
+                alert('Your callback request has been received. We will contact you shortly.');
+            }
+        </script>
+    </head>
+
+
+    <body id="BG"> <!--Front end-->
+        
+        <header>
+            <nav>
+                <input id="nav-toggle" type="checkbox"> 
+                <div class="logo"><img src="Media/Icons/logo.jpg" alt="Logo"></div>
+                <ul class="links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Resume.html">Resume</a></li>
+                    <li><a href="Gallery1.html">Gallery</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </nav>  
+        
+        </header>
+    
+        
+        <main >
+            
+           <section class="contact-page-section">
+            <div class="container">
+                <div class="sec-title">
+                    
+                </div>
+            </div>
+
+            <div class="inner-container">
+              <div class="row clearfix">
+                
+                  <!--Form Column-->
+                    <div class="form-column col-md-8 col-sm-12 col-xs-12">
+                      <div class="inner-column">
+                          
+                            <!--Contact Form-->
+                            <div class="contact-form">
+                                <form method="post" action="sendemail.php" id="contact-form">
+                                    <div class="row clearfix">
+                                        <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                            <input type="text" name="name" value="" placeholder="Name" required>
+                                        </div>
+                                         <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                            <input type="text" name="surname" value="" placeholder="Surname" required>
+                                        </div>
+                                        <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                            <input type="email" name="email" value="" placeholder="Email" required>
+                                        </div>
+                                        <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                            <input type="text" name="phone" value="" placeholder="Phone" required>
+                                        </div>
+                                        <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                            <textarea name="message" placeholder="Massage"></textarea>
+                                        </div>
+                                        <div class="form-group col-md-12 col-sm-12 co-xs-12 button-container">
+                                            <button type="submit" class="button">Send Now</button>
+                                            <button type="button" class="button" onclick="requestCallback()">Want a callback?</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--End Contact Form-->
+                            
+                        </div>
+                    </div>
+                    
+                    <!--Info Column-->
+                    <div class="info-column col-md-4 col-sm-12 col-xs-12">
+                      <div class="inner-column">
+                          <h2>Hello there!</h2>
+                            
+                            <h4>
+                            Thank you for visiting my website!<br><br>
+                            I would love to connect with you 
+                            and address any questions or 
+                            inquiries you may have. 
+                            <br>
+                            Feel free to reach out to me.
+                            </h4>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+                    <div class=" text-center">
+                        <div >
+                            <h1 id="social-title">My Social Media</H1>
+                        </div>                
+                    </div>
+    
+             <div class="container-fluid">
+                <div class="Cards">
+                    <div class=" text-center">
+                        <div class="card">
+                            <a href="https://www.Youtube.com" target="_blank"><img src="Media/Icons/youtube1.jpg" alt="Youtube"></a>
+                        </div>                
+                    </div>
+                     <div class=" text-center">
+                        <div class="card">
+                            <a href="https://www.instagram.com" target="_blank"><img src="Media/Icons/instagram1.png" alt="Instagram"></a>
+                        </div>
+                    </div>
+                     <div class=" text-center">
+                        <div class="card">
+                         <a href="https://www.facebook.com" target="_blank"><img src="Media/Icons/facebook1.png" alt="Facebook"></a>
+                        </div>
+                    </div>
+                     <div class="  text-center">
+                        <div class="card">
+                            <a href="https://www.tiktok.com" target="_blank"><img src="Media/Icons/tik-tok1.jpg" alt="Tiktok"></a> 
+                        </div> 
+                    </div>
+                </div>    
+            </div>
+
+        </main>
+        
+        <br><br><br><hr>
+
+        <footer >
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-md-4 footer-links"><br>
+                    
+                        <div>
+                             <h3>Quick Links</h3><br><br>
+                        </div>
+                        <ul>
+                            <li><a href=" Events.html">Portfolio</a></li>
+                            <li><a href="Social media.html">My skills</a></li>
+                            <li><a href="Gallery.html">About me</a></li>
+                            <li><a href="About.html">Get in touch</a></li>
+                           
+                        
+                        </ul>
+                    </div>    
+
+                    <!--Social media-->
+                    <div class="col-md-8"> <br>
+                        <div class="social-menu">
+                            <h3>Follow me</h3><br><br><br>
+                            <br><br><br><br><br>
+                            <ul>
+                                <li><a href="https://www.Youtube.com" target="_blank"><img src="Media/Icons/youtube.png" alt="Youtube"></a></li>
+                                <li><a href="https://www.instagram.com" target="_blank"><img src="Media/Icons/instagram.png" alt="Instagram"></a></li>
+                                <li><a href="https://www.facebook.com" target="_blank"><img src="Media/Icons/facebook.png" alt="Facebook"></a></li>
+                                <li><a href="https://www.tiktok.com" target="_blank"><img src="Media/Icons/tik-tok.png" alt="Tiktok"></a></li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
